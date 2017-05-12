@@ -1,6 +1,7 @@
 $( "#search_button" ).click(function() {
-    var searhcedvalue = $("#term").val();
-    $.get( "https://en.wikipedia.org/api/rest_v1/page/html/"+ searhcedvalue +"?redirect=true", function (data) {
+    var searhcedvalue = $("#term").val().replace(/ /g,"_");;
+    var searchedLang =  $("#selected_lang").val();
+    $.get( "https://" + searchedLang + ".wikipedia.org/api/rest_v1/page/html/"+ searhcedvalue +"?redirect=true", function (data) {
         $("#searched_term").html("<h3>"+ searhcedvalue + "</h3>")
     }).done(function (data) {
         $("#result_text").html(data);
