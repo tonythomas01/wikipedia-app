@@ -30,6 +30,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Link</a></li>
                 <li class="dropdown">
@@ -47,64 +48,70 @@
     </div><!-- /.container-fluid -->
 </nav>
 <!-- The app section -->
-<div class="container container-fluid">
-    <div class="col-md-3">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h4>Crawl Wikipedia</h4>
-            </div>
-            <div class="panel-body">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="term" class="col-sm-2 control-label">Item</label>
-                        <div class="col-sm-10">
-                            <input type="term" class="form-control" id="term" placeholder="Your item here">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 id="searched_term">
+                        No item searched
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-3">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="term" class="col-sm-2 control-label">Item</label>
+                                        <div class="col-sm-10">
+                                            <input type="term" class="form-control" id="term" placeholder="Your item here">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="term" class="col-sm-2 control-label">Lang</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" id="selected_lang">
+                                                <option value="en" selected>English</option>
+                                                <option value="als">Alemannisch</option>
+                                                <option value="da">Dansk</option>
+                                                <option value="de">Deutsch</option>
+                                                <option value="es">Español</option>
+                                                <option value="fr">Français</option>
+                                                <option value="ar">عوالق</option>
+                                                <option value="el">Πλαγκτόν</option>
+                                                <option value="fa">پلانکتون</option>
+                                                <option value="he">פלנקטון</option>
+                                                <option value="ja">プランクトン</option>
+                                                <option value="ru">Планктон</option>
+                                                <option value="ta">மிதவைவாழி</option>
+                                                <option value="th">แพลงก์ตอน</option>
+                                                <option value="zh">浮游生物界</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="button" id="search_button" class="btn btn-default">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="term" class="col-sm-2 control-label">Lang</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="selected_lang">
-                                <option value="en" selected>English</option>
-                                <option value="als">Alemannisch</option>
-                                <option value="da">Dansk</option>
-                                <option value="de">Deutsch</option>
-                                <option value="es">Español</option>
-                                <option value="fr">Français</option>
-                                <option value="ar">عوالق</option>
-                                <option value="el">Πλαγκτόν</option>
-                                <option value="fa">پلانکتون</option>
-                                <option value="he">פלנקטון</option>
-                                <option value="ja">プランクトン</option>
-                                <option value="ru">Планктон</option>
-                                <option value="ta">மிதவைவாழி</option>
-                                <option value="th">แพลงก์ตอน</option>
-                                <option value="zh">浮游生物界</option>
-                            </select>
+                    <div class="col-md-9">
+                        <div class="panel panel-success">
+                            <div class="panel-body">
+                                <span id="result_text">
+                                    No results to show
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="button" id="search_button" class="btn btn-default">Search</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-9">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h4 id="searched_term">
-                    No Item Searched
-                </h4>
-            </div>
-            <div class="panel-body">
-                <span id="result_text">
-                    No results to show
-                </span>
-            </div>
-        </div>
+
     </div>
 </div>
 

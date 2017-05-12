@@ -2,7 +2,7 @@ $( "#search_button" ).click(function() {
     var searhcedvalue = $("#term").val().replace(/ /g,"_");;
     var searchedLang =  $("#selected_lang").val();
     $.get( "https://" + searchedLang + ".wikipedia.org/api/rest_v1/page/html/"+ searhcedvalue +"?redirect=true", function (data) {
-        $("#searched_term").html("<h3>"+ searhcedvalue + "</h3>")
+        $("#searched_term").html("<h4>"+ searhcedvalue + "</h4>")
     }).done(function (data) {
         $("#result_text").html(data);
         $('link[href="//' + searchedLang + '.wikipedia.org/w/load.php?modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.' +
