@@ -5,7 +5,7 @@ $( "#search_button" ).click(function() {
         $("#searched_term").html("<h3>"+ searhcedvalue + "</h3>")
     }).done(function (data) {
         $("#result_text").html(data);
-        $('link[href="//en.wikipedia.org/w/load.php?modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.' +
+        $('link[href="//' + searchedLang + '.wikipedia.org/w/load.php?modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.' +
             'content.parsoid%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Csite.styles%7Cext.cite.style%7Cmediawiki.page.' +
             'gallery.styles&only=styles&skin=vector').remove();
     }).fail(function () {
